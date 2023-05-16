@@ -54,6 +54,7 @@ async function createVerifiablePresentation(
 
   console.log('VP was successfully created. see file:')
   console.log(filePath.toString())
+  return 'VP was successfully created.'
 }
 
 export { createVerifiablePresentation }

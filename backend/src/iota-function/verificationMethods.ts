@@ -21,6 +21,7 @@ async function addVerificationMethod(
 
   console.log('Creating Method Successful!')
   console.log(`Explorer Url:`, ExplorerUrl.mainnet().resolverUrl(account.did()))
+  return 'Creating Method Successful!'
 }
 
 export { addVerificationMethod }

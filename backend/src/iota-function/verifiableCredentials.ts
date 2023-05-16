@@ -27,7 +27,8 @@ async function createSignedVerifiableCredential(
   subjectDid: string,
   verificationMethodFragment: string,
   revocationBitmapFragment: string,
-  revocationIndex: number
+  revocationIndex: number,
+  credentialObject: object
 ) {
   const issuer: Account = await loadDID(issuerName, issuerPassword)
 
@@ -38,8 +39,7 @@ async function createSignedVerifiableCredential(
   const subject = {
     id: subjectDid,
     name: subjectName,
-    degree: 'Bachelor of Science and Arts',
-    GPA: '4.0',
+    data: credentialObject,
   }
 
   // Create an unsigned `UniversityDegree` credential for the subject.
@@ -69,6 +69,7 @@ async function createSignedVerifiableCredential(
 
   console.log('VC was successfully created. see file:')
   console.log(filePath.toString())
+  return 'VC was successfully created.'
 }
 
 export { createSignedVerifiableCredential }

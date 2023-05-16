@@ -57,9 +57,11 @@ async function checkVerifiablePresentation(
     )
     // Since no errors were thrown by `verifyPresentation` we know that the validation was successful.
     console.log(`VP successfully validated`)
+    return `VP successfully validated`
   } catch (error) {
     console.log(`VP validation unsuccessful`)
     console.log(error.message)
+    return `VP validation unsuccessful`
   }
 }
 
