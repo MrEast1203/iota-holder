@@ -4,6 +4,9 @@ import loadDIDRoute from './loadDID'
 import revokeVCRoute from './Revo'
 import VCRoute from './VC'
 import VPRoute from './VP'
+import DownloadFileRoute from './DownloadFile'
+import uploadFileRoute from './uploadFile'
+import downloadVPRoute from './downloadVP'
 const wrap =
   (fn: any) =>
   (...args: any) =>
@@ -16,6 +19,9 @@ function main(app: any) {
   app.post('/api/revokeVC', wrap(revokeVCRoute))
   app.get('/api/VC', wrap(VCRoute))
   app.get('/api/VP', wrap(VPRoute))
+  app.get('/api/downloadSH', wrap(DownloadFileRoute))
+  app.post('/api/uploadFile', wrap(uploadFileRoute))
+  app.get('/api/downloadVP', wrap(downloadVPRoute))
 }
 
 export default main

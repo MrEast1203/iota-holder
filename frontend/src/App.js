@@ -1,6 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import instance from "./api";
+import FileUpload from "./components/FileUpload";
+import GetDID from "./components/GetDID";
+import GetVP from "./components/GetVP";
 
 function App() {
   const createDID = (userName, password) => {
@@ -33,10 +36,13 @@ function App() {
         <button
           type="button"
           onClick={() => {
-            createDID("kan-test1", "kan123");
+            createDID("kan-test2", "kan123");
           }}>
-          我是按鈕
+          CreateDID
         </button>
+        <FileUpload />
+        <GetDID />
+        <GetVP />
       </header>
     </div>
   );

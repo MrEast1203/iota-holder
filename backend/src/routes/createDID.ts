@@ -7,7 +7,7 @@ const createDIDRoute = async (req: any, res: any) => {
   const password = body.password
   console.log(userName, password)
   const didData = await createDID(userName, password)
-  console.log(didData)
+  // console.log(didData)
   const message = await addVerificationMethod(userName, password, 'key-1')
   console.log(message)
   res.send(didData)

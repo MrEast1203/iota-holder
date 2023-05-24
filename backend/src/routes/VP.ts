@@ -4,8 +4,11 @@ const VPRoute = async (req: any, res: any) => {
   const holderName = data.holderName
   const holderPassword = data.holderPassword
   const credentialFile = data.credentialFile
-  const verificationMethodFragment = data.verificationMethodFragment
-  const challenge = data.challenge
+  // const verificationMethodFragment = data.verificationMethodFragment
+  const verificationMethodFragment = 'key-1'
+  // const challenge = data.challenge
+  const challenge = 'xyz123'
+  console.log(data)
   const message = await createVerifiablePresentation(
     holderName,
     holderPassword,
