@@ -35,10 +35,10 @@ const FileUpload = () => {
   };
   const handleDownloadClick = async () => {
     downloadFile
-      .get("/downloadSH", { params: { name: "kan-test2" } })
+      .get("/downloadSH", { params: { name: "kan-test3" } })
       .then((res) => {
         console.log(res);
-        FileDownload(res.data, "kan-test2.hodl");
+        FileDownload(res.data, "kan-test3.hodl");
       })
       .catch((err) => {
         console.log(err);

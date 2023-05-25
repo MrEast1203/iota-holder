@@ -2,7 +2,7 @@ import React from "react";
 import instance from "../api";
 const handleClick = async () => {
   instance
-    .get("/loadDID", { params: { name: "kan-test2", password: "kan123" } })
+    .get("/loadDID", { params: { name: "kan-test3", password: "kan123" } })
     .then((res) => {
       console.log(res);
     })

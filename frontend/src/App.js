@@ -36,7 +36,7 @@ function App() {
         <button
           type="button"
           onClick={() => {
-            createDID("kan-test2", "kan123");
+            createDID("kan-test3", "kan123");
           }}>
           CreateDID
         </button>
